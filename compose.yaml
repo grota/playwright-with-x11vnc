@@ -1,0 +1,18 @@
+services:
+  playwright:
+    image: ghcr.io/grota/playwright-with-x11vnc:v1.49.1-v1
+    # just an example, to mount the playwright codebase
+    volumes:
+      - ./src:/app
+    working_dir: /app
+    ports:
+      # - 9323:9323 # to see html test results
+      - 5900:5900 # vnc server port.
+
+    # Not required, just like I like it.
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "10m"
+        mode: non-blocking
