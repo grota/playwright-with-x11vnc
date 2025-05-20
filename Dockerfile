@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.49.1
+FROM mcr.microsoft.com/playwright:v1.52.0
 
 RUN apt-get update && \
   apt-get install -y x11vnc inetutils-ping && \

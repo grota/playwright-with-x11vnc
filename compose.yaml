@@ -1,6 +1,6 @@
 services:
   playwright:
-    image: ghcr.io/grota/playwright-with-x11vnc:v1.49.1-v1
+    image: ghcr.io/grota/playwright-with-x11vnc:v1.52.0
     # just an example, to mount the playwright codebase
     volumes:
       - ./src:/app
